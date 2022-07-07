@@ -1,0 +1,13 @@
+services:
+  tftp:
+    image: agaia/tftp-server:latest
+    build:
+      context: .
+    volumes:
+      - ./tftp:/tftp
+    #privileged: true
+    network_mode: host
+    #ports:
+      #- 69:69/udp
+      #- 69:69/tcp
+
